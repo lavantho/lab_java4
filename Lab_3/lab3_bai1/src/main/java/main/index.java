@@ -41,7 +41,7 @@ public class index extends HttpServlet {
 		Part photo=request.getPart("photo_file");
       File photoFile=new File(dir,photo.getSubmittedFileName());
       photo.write(photoFile.getAbsolutePath());
-      Part doc = request.getPart("doc_file"); // file tài liệu
+      Part doc = request.getPart("doc_file"); 
       File docFile = new File(dir, doc.getSubmittedFileName());
       doc.write(docFile.getAbsolutePath());
       request.setAttribute("img", photoFile);
